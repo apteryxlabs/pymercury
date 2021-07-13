@@ -1,3 +1,5 @@
+import os
+
 import requests
 import json
 from uuid import uuid4
@@ -88,7 +90,7 @@ def get_recipient_data():
             })
         }),
         "emails": [
-            "matthew@apteryxlabs.com"
+            os.environ['MERCURY_EMAIL']
         ],
         "id": str(uuid4()),
         "internationalWireRoutingInfo": None,
